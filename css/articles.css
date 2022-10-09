@@ -1,0 +1,288 @@
+@charset "utf-8";
+
+html, body{
+    margin: 0;
+    padding: 0;
+
+    width: 100vw;
+
+    background-color: #ffffff;
+
+    font-family: Bahnschrift, Noto Sans JP, sans-serif;
+}
+
+
+
+
+
+/*=====上部タブバー関連=====*/
+
+#abovetabbar{
+    margin: 0;
+
+    padding-left: 25vw;
+    
+    height: 6vw;
+    width: 100vw;
+
+    background-color: #2454A6;
+
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    list-style: none;
+
+    transition: all 0.4s;
+}
+
+#logo{
+    background-color: #2454A600;
+
+    position: absolute;
+    z-index: 999;
+    
+    height: 6vw;
+    width: 25vw;
+}
+
+#logotitle{
+    font-family: Oswald ExtraLight, sans-serif;
+    font-size: 3.75vw;
+    font-weight: bold;
+
+    margin-left: 7vw;
+}
+
+#abovetabbar li a{
+    position: relative;
+    overflow: hidden;
+
+    padding: 10px 60px;
+
+    color: #ffffff;
+    font-size: 1.75vw;
+
+    margin-right: 3vw;
+    margin-left: 3vw;
+}
+
+#abovetabbar li span{
+    position: absolute;
+
+    left: 50%;
+
+    transition: all .5s;
+    transform: translate(-50%, 0); 
+
+    display: block;
+    opacity: 1;
+    white-space: nowrap;
+}
+
+#abovetabbar li span:nth-child(2){
+    opacity: 0;
+    transform: translate(-50%,100%);
+}
+
+#abovetabbar li:hover span:nth-child(1){
+    opacity: 0;
+    transform: translate(-50%,-100%);
+}
+
+#abovetabbar li:hover span:nth-child(2){
+    opacity: 1;
+    transform: translate(-50%, 0);
+    font-size: 1.25vw;
+    font-weight: bold;
+}
+
+#aboves.fixed{
+    position: fixed;
+    z-index: 999;
+
+    top: 0;
+    left: 0;
+}
+
+#abovetabbar.fixed{
+    background-color: #2454A6bb;
+}
+
+
+
+
+
+/*=====記事関連=====*/
+
+article{
+    background-color: #ffffff;
+
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+
+    padding-left: 2vw;
+    padding-right: 2vw;
+
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 90vw;
+
+    transition: all 0.4s;
+}
+
+.artnormal{
+    margin-bottom: 0.5vw;
+
+    text-align: justify;
+}
+
+.arttitle{
+    color: #000000;
+
+    font-size: 2.75vw;
+    font-weight: bold;
+}
+
+.artdate{
+    color: #000000;
+
+    font-size: 1.25vw;
+    font-weight: normal;
+
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.articlecontainer{
+    display: flex;
+    justify-content: left;
+
+    width: 100%;
+}
+
+.articletxt{
+    color: #000000;
+
+    font-size: 1.375vw;
+    font-weight: normal;
+
+    line-height: 1.9;
+}
+
+.articletxturl{
+    text-decoration: none;
+    color: #324a63;
+    display: inline;
+
+    font-size: 1.375vw;
+    font-weight: bold;
+
+    background-color: #324a6322;
+
+    padding-left: 0.25vw;
+    padding-right: 0.25vw;
+
+    padding-top: 0.25vw;
+    padding-bottom: 0.25vw;
+
+    transition: all 0.2s;
+
+    line-height: 1.7;
+}
+
+.articletxturl:hover{
+    background-color: #324a63;
+    color: #ffffff;
+}
+
+.imagetxt{
+    margin-top: 1vw;
+    font-size: 0.875vw;
+}
+
+.articlelinks{
+    color: #000000;
+    font-size: 1.15vw;
+    font-weight: normal;
+
+    margin-top: 2.5vw;
+
+    line-height: 1.2;
+}
+
+#artlinktitle{
+    color: #000000;
+    font-size: 1.75vw;
+    font-weight: bold;
+
+    margin-bottom: 1vw;
+}
+
+.artlink{
+    display: inline;
+
+    color: #000000;
+    font-size: 1.15vw;
+    font-weight: normal;
+}
+
+
+
+
+/*=====前後記事選択=====*/
+.artchoicecontainer{
+    display: flex;
+    justify-content: center;
+
+    width: 90vw;
+}
+
+.artchoicebtn{
+    background-color:  #2454A6;
+    color: #fff;
+    font-size: 0.835vw;
+    margin: 2vw;
+    padding: 1vw;
+
+    width: 20vw;
+}
+
+
+
+
+/*=====ページ下部フッター=====*/
+footer{
+    background-color: #2454A633;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+
+    flex-flow: column;
+}
+
+.footerlinkblock{
+    height: 2vw;
+    width: 10vw;
+
+    margin: 0.5vw;
+    padding-top: 0.25vw;
+    padding-bottom: 0.25vw;
+
+    text-align: center;
+    line-height: 1.5vw;
+    color: #000000;
+    font-size: 1vw;
+    font-weight: bold;
+}
